@@ -10,10 +10,10 @@
     </feature>
     <name>MOVE-IT</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A mobile application to help users identify mechanics and tow operators close by.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Efua Bentsiwa Bainson
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -37,5 +37,4 @@
     <icon density="xxxhdpi" src="res/android/appicon.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="SplashScreenDelay" value="3000" />
 </widget>
