@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no"> -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      <!--   <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+        <title>MOVE-IT</title>
+         <style type="text/css">
+                 body{
+                    font-family: 'Ubuntu Condensed', sans-serif;
+                 }
+                  #description {
+                    font-family: Roboto;
+                    font-size: 15px;
+                    font-weight: 300;
+                  }
+
+                  #infowindow-content .title {
+                    font-weight: bold;
+                  }
+
+                  #infowindow-content {
+                    display: none;
+                  }
+
+                  #map #infowindow-content {
+                    display: inline;
+                  }
+
+                  .pac-card {
+                    margin: 10px 10px 0 0;
+                    border-radius: 2px 0 0 2px;
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    outline: none;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                    background-color: #fff;
+                    font-family: Roboto;
+                  }
+
+                  #pac-container {
+                    padding-bottom: 12px;
+                    margin-right: 12px;
+                  }
+
+                  .pac-controls {
+                    display: inline-block;
+                    padding: 5px 11px;
+                  }
+
+                  .pac-controls label {
+                    font-family: Roboto;
+                    font-size: 13px;
+                    font-weight: 300;
+                  }
+
+                  #pac-input {
+                    background-color: #fff;
+                    font-family: Roboto;
+                    font-size: 15px;
+                    font-weight: 300;
+                    margin-top: 5%;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    padding: 0 11px 0 13px;
+                    text-overflow: ellipsis;
+                    width: 80%;
+                  }
+
+                  #pac-input:focus {
+                    border-color: #4d90fe;
+                  }
+
+                  #title {
+                    color: #fff;
+                    background-color: #4d90fe;
+                    font-size: 25px;
+                    font-weight: 500;
+                    padding: 6px 12px;
+                  }
+                  #target {
+                    width: 345px;
+                  }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div> -->
+       
+         <nav>
+            <div class="nav-wrapper grey darken-3">
+               
+                  <a href="#" data-activates="slide-out" class="button-collapse brand-logo left amber-text "><i class="material-icons">menu</i><h5 style="font-family: 'Ubuntu Condensed', sans-serif;">Pick A Tow Operator</h5></a>
+            </div>
+        </nav>
+        <ul id="slide-out" class="side-nav  grey darken-3 white-text">
+            <li><div class="userView">
+                    <div class="background">
+                        <img src="img/profileimg.jpg">
+                    </div>
+                    <a href="#!user"><img class="" src=""></a>
+                    <a href="#!name"><span class="white-text name"><h5 style="font-family: 'Ubuntu Condensed', sans-serif;"><b>Efua Bainson</b></h5></span></a>
+                    <a href="#!email"><span class="white-text email"><h6 style="font-family: 'Ubuntu Condensed', sans-serif;"><b>efuabainson@gmail.com</b></h6></span></a>
+                </div></li>
+            <li><a class="white-text" href="landingpage.html"><i class="amber-text material-icons">build</i>Pick a Mechanic</a></li>
+            <li><a class="white-text" href="towoperatorpage.html"><i class=" amber-text material-icons">directions_car</i>Pick a Tow Operator</a></li>
+            <li><a class="white-text" href="requests.html"><i class="amber-text material-icons">shopping_cart</i>My Requests</a></li>
+            <li><div class="divider grey"></div></li>
+             <li><a class="white-text" href="index.html"><i class="amber-text material-icons">exit_to_app</i>Logout</a></li>
+        </ul>  
+        <div>
+            <input id="pac-input" class="controls" type="text" placeholder="Search ">
+            <div id="map" style="width:100%;height:500px"></div>
+
+               <!-- Modal Structure -->
+              <div id="confirmpick" class="modal">
+                <div class="modal-content">
+                  <h4>CONFIRM</h4>
+                  <p><div class="row">
+                        <div class="col s1"></div>
+                        <form class="col s12">
+                          <text class="row">
+                            <text class="input-field col s12">
+                              <input  id="cartype" value="Kia" type="text" class="validate">
+                              <label for="cartype"><i class="material-icons">directions_car</i>Car Type</label>
+                            </text>
+                          </text>
+                          <text class="row">
+                            <text class="input-field col s12">
+                              <input id="carnumber" type="text" value="GA2019" class="validate">
+                              <label for="carnumber"><i class="material-icons">directions_car</i>Car Number</label>
+                            </text>
+                          </text>
+                        </form>
+                        <div class="col s1"></div>
+                    </div></p>
+                </div>
+                <div class="modal-footer">
+                  
+                  <a href="summary.html" class="modal-action modal-close waves-effect  grey darken-3 btn">CONFIRM</a>
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CANCEL</a>
+                </div>
+              </div>
+        </div>
+         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+                  $(document).ready(function(){
+                    
+                    $('.modal').modal();
+                  });
+      
+
+                  var map, infoWindow;
+
+                  function initMap() {
+                    var latLng = {lat: 5.7596123, lng: -0.2194058};
+                    map = new google.maps.Map(document.getElementById('map'), {
+                      center: latLng,
+                      zoom: 14,
+                       disableDefaultUI: true,
+                        zoomControl: true,
+                        scaleControl: true
+                    });
+
+                    infoWindow = new google.maps.InfoWindow;
+
+                    searchPlace(map);
+
+                    // Try HTML5 geolocation.
+                    if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        };
+
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent('You are here.');
+                        infoWindow.open(map);
+                        map.setCenter(pos);
+                      }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                      });
+                    } else {
+                      // Browser doesn't support Geolocation
+                      handleLocationError(false, infoWindow, map.getCenter());
+                    }
+                    infowindow = new google.maps.InfoWindow({
+                      content: "<div class='row'><span class='card-title col s9 m9'><b>Nana Ampofo Mechanics</b><p>Nissan, Mazda, Honda, Hyundai, Kia, Opel, Daewoo, Mitsubishi</p></span><span class='col s3 m3'><center><a  href='#confirmpick' class='btn-floating  btn-medium waves-effect waves-light green'><i class='material-icons'>phone</i></a></center></span></div>"
+                    });
+
+           
+
+                    var marker = new google.maps.Marker({
+                        position: {lat: 5.643259, lng: -0.169382},
+                        map: map,
+                        icon: "img/marker1.png",
+                        animation: google.maps.Animation.BOUNCE
+                    });
+
+                    marker.addListener('click', function() {
+                      infowindow.open(map, marker);
+                    });
+                  }
+
+                  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                                          'Error: The Geolocation service failed.' :
+                                          'Error: Your browser doesn\'t support geolocation.');
+                    infoWindow.open(map);
+                  }
+
+                  function searchPlace(map){
+                      // Create the search box and link it to the UI element.
+                    var input = document.getElementById('pac-input');
+                    var searchBox = new google.maps.places.SearchBox(input);
+                    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                        // Bias the SearchBox results towards current map's viewport.
+                    map.addListener('bounds_changed', function() {
+                      searchBox.setBounds(map.getBounds());
+                    });
+
+                    var markers = [];
+
+                    searchBox.addListener('places_changed', function() {
+                      var places = searchBox.getPlaces();
+
+                      if (places.length == 0) {
+                        return;
+                      }
+
+                      // Clear out the old markers.
+                      markers.forEach(function(marker) {
+                        marker.setMap(null);
+                      });
+                      markers = [];
+
+                      // For each place, get the icon, name and location.
+                      var bounds = new google.maps.LatLngBounds();
+                      places.forEach(function(place) {
+                        if (!place.geometry) {
+                          console.log("Returned place contains no geometry");
+                          return;
+                        }
+                        var icon = {
+                          url: place.icon,
+                          size: new google.maps.Size(71, 71),
+                          origin: new google.maps.Point(0, 0),
+                          anchor: new google.maps.Point(17, 34),
+                          scaledSize: new google.maps.Size(25, 25)
+                        };
+
+                        // Create a marker for each place.
+                        markers.push(new google.maps.Marker({
+                          map: map,
+                          title: place.name,
+                          position: place.geometry.location
+                        }));
+
+                        if (place.geometry.viewport) {
+                          // Only geocodes have viewport.
+                          bounds.union(place.geometry.viewport);
+                        } else {
+                          bounds.extend(place.geometry.location);
+                        }
+                      });
+                      map.fitBounds(bounds);
+                    });
+                  }
+            </script>
+
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh4MSS4vsGc5kCdxZyyj6Q_Q_cLadvgOA&libraries=places&callback=initMap"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+       
+         <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script >
+
+             $(".button-collapse").sideNav();
+          
+          
+       
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.efuabainson" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>MOVE-IT</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <splash density="land-hdpi" src="res/screen/android/drawable-hdpi/background.png" />
+    <splash density="land-mdpi" src="res/screen/android/drawable-mdpi/background.png" />
+    <splash density="land-xhdpi" src="res/screen/android/drawable-xhdpi/background.png" />
+    <splash density="port-xxhdpi" src="res/screen/android/drawable-xxhdpi/background.png" />
+    <splash density="port-xxxhdpi" src="res/screen/android/drawable-xxxhdpi/background.png" />
+    <icon density="ldpi" src="res/android/appicon.png" />
+    <icon density="mdpi" src="res/android/appicon.png" />
+    <icon density="hdpi" src="res/android/appicon.png" />
+    <icon density="xhdpi" src="res/android/appicon.png" />
+    <icon density="xxhdpi" src="res/android/appicon.png" />
+    <icon density="xxxhdpi" src="res/android/appicon.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
+</widget>

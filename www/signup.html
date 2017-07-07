@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no"> -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      <!--   <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+        <title>MOVE-IT</title>
+        <style type="text/css">
+            body{
+                background: #8e9eab;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #eef2f3, #8e9eab); 
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="row">
+          <div class="col s1">
+            <a href="index.html" class="grey-text darken-3"><i class="small material-icons">keyboard_backspace</i></a>
+          </div>
+          <div class="col s10">
+            <center><img src="img/logo.png" alt="MOVE_IT Logo" style="width:65%;height:50%;padding-top: 5%;padding-bottom:5%;"></center>
+          </div>
+          <div class="col s1">
+
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col s1"></div>
+            <form class="col s10">
+              <text class="row">
+                <text class="input-field col s12">
+                  <input  id="firstname" type="text" class="validate">
+                  <label for="firstname"><i class="material-icons">person_outline</i>First Name</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input id="lastname" type="text" class="validate">
+                  <label for="lastname"><i class="material-icons">person_outline</i>Last Name</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input  id="phone" type="text" class="validate">
+                  <label for="phone"><i class="material-icons">phone</i>Phone Number</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input id="email" type="text" class="validate">
+                  <label for="email"><i class="material-icons">email</i>Email</label>
+                </text>
+              </text>
+                <text class="row">
+                <text class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password"><i class="material-icons">lock_outline</i>Password</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password"><i class="material-icons">lock_outline</i>Confirm Password</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input  id="cartype" type="text" class="validate">
+                  <label for="cartype"><i class="material-icons">directions_car</i>Car Type</label>
+                </text>
+              </text>
+              <text class="row">
+                <text class="input-field col s12">
+                  <input id="carnumber" type="text" class="validate">
+                  <label for="carnumber"><i class="material-icons">directions_car</i>Car Number</label>
+                </text>
+              </text>
+               <div class="row">
+                <div class="col s12">
+                 <center><a href="index.html" class="waves-effect  grey darken-3 btn-large">Sign Up</a></center>
+                </div>
+              </div>
+            </form>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="col s10"> <center><p class="flow-text">By clicking Sign Up you are agreeing to our <a href="#"><b>Privacy Policy</b></a> and <a href="#"><b>Terms & Conditions </b></a></p></center></div>
+             <div class="col s1"></div>
+        </div>
+       
+        
+      
+        <script type="text/javascript" src="cordova.js"></script>
+       
+         <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script >
+
+             $(".button-collapse").sideNav();
+          
+          
+       
+        </script>
+    </body>
+</html>
