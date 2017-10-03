@@ -121,7 +121,7 @@
         </ul>  
         <div>
             <input id="pac-input" class="controls" type="text" placeholder="Search ">
-            <div id="map" style="width:100%;height:700px"></div>
+            <div id="map" style="width:100%;height:600px"></div>
              <!-- Modal Trigger -->
              <!--  <a class="waves-effect waves-light btn" href="#confirmpick">Modal</a> -->
 
@@ -159,10 +159,46 @@
          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
+                var curlat;
+                var curlong;
                   $(document).ready(function(){
                     
                     $('.modal').modal();
                   });
+
+                  // document.addEventListener("deviceready", onDeviceReady, false);
+
+                  // function onDeviceReady() {
+                  //       alert("navigator.geolocation works well");
+                  //      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+                  //       // onSuccess Callback
+                  //   // This method accepts a Position object, which contains the
+                  //   // current GPS coordinates
+                  //   //
+                  //   var onSuccess = function(position) {
+                  //       curlat=position.coords.latitude;
+                  //       curlong=position.coords.longitude ;
+
+                  //       alert('Latitude: '          + position.coords.latitude          + '\n' +
+                  //             'Longitude: '         + position.coords.longitude         + '\n' +
+                  //             'Altitude: '          + position.coords.altitude          + '\n' +
+                  //             'Accuracy: '          + position.coords.accuracy          + '\n' +
+                  //             'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                  //             'Heading: '           + position.coords.heading           + '\n' +
+                  //             'Speed: '             + position.coords.speed             + '\n' +
+                  //             'Timestamp: '         + position.timestamp                + '\n');
+                  //   };
+
+                  //   // onError Callback receives a PositionError object
+                  //   //
+                  //   function onError(error) {
+                  //       alert('code: '    + error.code    + '\n' +
+                  //             'message: ' + error.message + '\n');
+                  //   }
+                  // }
+
+                   
       
 
                   var map, infoWindow;
@@ -200,6 +236,7 @@
                       // Browser doesn't support Geolocation
                       handleLocationError(false, infoWindow, map.getCenter());
                     }
+
                     infowindow = new google.maps.InfoWindow({
                       content: "<div class='row'><span class='card-title col s9 m9'><b>Nana Ampofo Mechanics</b><p>Nissan, Mazda, Honda, Hyundai, Kia, Opel, Daewoo, Mitsubishi</p></span><span class='col s3 m3'><center><a  href='#confirmpick' class='btn-floating  btn-medium waves-effect waves-light green'><i class='material-icons'>phone</i></a></center></span></div>"
                     });

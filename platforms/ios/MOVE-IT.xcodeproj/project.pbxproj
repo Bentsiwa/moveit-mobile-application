@@ -18,6 +18,8 @@
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		19ACB34E4C6F45EFA306CCEB /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC135FDEC104112B37EFA35 /* CDVSplashScreen.m */; };
 		F07FC7849A5445358F4BC25B /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = F16557D8B6FC410F891455FC /* CDVViewController+SplashScreen.m */; };
+		38DC72E5A76A405DA5164F9F /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBC64B14BD4C81AD312E7E /* CDVLocation.m */; };
+		7A17C01309D64A288026E836 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B689C2EB8A84EFE9A96EEB2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		F16557D8B6FC410F891455FC /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		668BF002CC0E474A855D7DAA /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		651CFC6942EF4CA2BEB3B721 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3BEBC64B14BD4C81AD312E7E /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9AABCCF1512245318AD78EDE /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7B689C2EB8A84EFE9A96EEB2 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				7A17C01309D64A288026E836 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +146,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B689C2EB8A84EFE9A96EEB2 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 				F16557D8B6FC410F891455FC /* CDVViewController+SplashScreen.m */,
 				668BF002CC0E474A855D7DAA /* CDVSplashScreen.h */,
 				651CFC6942EF4CA2BEB3B721 /* CDVViewController+SplashScreen.h */,
+				3BEBC64B14BD4C81AD312E7E /* CDVLocation.m */,
+				9AABCCF1512245318AD78EDE /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "MOVE-IT/Plugins";
@@ -283,6 +292,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				19ACB34E4C6F45EFA306CCEB /* CDVSplashScreen.m in Sources */,
 				F07FC7849A5445358F4BC25B /* CDVViewController+SplashScreen.m in Sources */,
+				38DC72E5A76A405DA5164F9F /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,15 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.efuabainson"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "io.cordova.efuabainson"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "io.cordova.efuabainson"
+        }
+    }
 }

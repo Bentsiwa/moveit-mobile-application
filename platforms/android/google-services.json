@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "156884765374",
+    "firebase_url": "https://moveit-android.firebaseio.com",
+    "project_id": "moveit-android",
+    "storage_bucket": "moveit-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156884765374:android:d68c4b01a2175075",
+        "android_client_info": {
+          "package_name": "io.cordova.efuabainson"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156884765374-i8kgfd9g8ig9jm529n5arkcnhatnamhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6QfX1GnzyJ2a_iol1z609WL847mEDkXA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

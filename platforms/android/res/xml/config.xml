@@ -8,6 +8,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
     <name>MOVE-IT</name>
     <description>
         A mobile application to help users identify mechanics and tow operators close by.
