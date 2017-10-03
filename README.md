@@ -7,7 +7,7 @@ This is a cross-platform mobile application that enables drivers to find and con
 <ul>
   <li><a href="http://materializecss.com">Materialize</a></li>
   <li><a href="https://developers.google.com/maps/">Google Maps</a></li>
-  <li><a href="http://cordova.apache.org/Apache Cordova</a></li>
+  <li><a href="http://cordova.apache.org/">Apache Cordova</a></li>
 </ul>
 
 
